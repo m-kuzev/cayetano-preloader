@@ -1,0 +1,135 @@
+body {
+  background-color: black;
+}
+
+@font-face {
+  font-family: 'Futura';
+  src: url('FuturaNew.woff');
+}
+
+/* PRELOADER CSS */
+.preloader-wrapper{
+  position: fixed;
+  width: 320px;
+  height: 140px;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  padding-left: 50px;
+}
+  
+  /* TEXT position */
+  .preloader {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    font-family: 'Futura', sans-serif;
+  }
+    /* CAYETANO text*/
+    .preloader .big-text {
+      font-size: 70px;
+      color: #529BD4;
+      /*font-weight: bolder;*/
+      background-image: linear-gradient(135deg, #529bd4 0%,#529bd4 78%,#ffffff 84%,#ffffff 90%,#529bd4 96%,#529bd4 100%,#7db9e8 100%);
+    }
+    /* GAMING text */
+    .preloader .small-text {
+      width: 300px;
+      font-size: 19px;
+      color: #F49825;
+      padding-left: 145px;
+      margin-top: -20px;
+      /*font-weight: bolder;*/
+      background-image: linear-gradient(135deg, #F49825 0%,#F49825 78%,#ffffff 84%,#ffffff 90%,#F49825 96%,#F49825 100%,#F49825 100%);
+    }
+
+    /* TOP SQUARES */
+    .top-squares-wrapper {
+      position: relative;
+      top: 33px;
+      left: 158px;
+    }
+      .top-square {
+        position: relative;
+        width: 17px;
+        height: 17px;
+        background-color: #D8F0FB;
+        border-radius: 2px;
+        float: left;
+        margin-left: 2px;
+        opacity: 0;
+      }
+        .top-square.one {
+          animation-delay: 1.65s;
+        }
+        .top-square.two {
+          animation-delay: 1.7s;
+        }
+        .top-square.three {
+          animation-delay: 1.75s;
+        }
+        .top-square.four {
+          top: -19px;
+          left: -38px;
+          animation-delay: 1.8s;
+        }
+
+    /* BOTTOM SQUARES */
+    .bottom-squares-wrapper {
+      margin-left: 105px;
+      margin-top: -21px;
+    } 
+      .bottom-square {
+        position: relative;
+        width: 17px;
+        height: 17px;
+        background-color: #F0B534;
+        border-radius: 2px;
+        opacity: 0;
+      }
+        .bottom-square.one {
+          top: 2px;
+          animation-delay: 1.5s;
+        }
+        .bottom-square.two {
+          animation-delay: 1.55s;
+        }
+        .bottom-square.three {
+          top: -34px;
+          left: 19px;
+          animation-delay: 1.6s;
+        }
+
+@keyframes blink {
+	60% { background-position: 0; }
+	100% { background-position: 270px; }
+}
+
+@keyframes showSquare {
+  50% { opacity: 0; }
+	100% { opacity: 1; }
+}
+
+.blink-animation {
+  /* Anim propetries */
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-repeat: repeat-x;
+  -webkit-text-fill-color: transparent;
+  animation: blink 3s linear infinite;
+  transform: translate3d(0,0,0);
+  backface-visibility: hidden;
+}
+
+.show-square-anim {
+  animation: showSquare 3s forwards infinite;
+}
+
+@media screen and (min-width:0\0) and (min-resolution: +72dpi) {
+  .big-text, .small-text {
+    background-image: none !important;
+  }
+  .small-text {
+    font-weight: normal !important;
+  }
+}
