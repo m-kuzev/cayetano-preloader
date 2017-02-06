@@ -4,42 +4,46 @@ body {
 
 @font-face {
   font-family: 'Futura';
-  src: url('FuturaLight.ttf');
+  src: url('FuturaMedium.woff');
 }
 
 /* PRELOADER CSS */
 .preloader-wrapper{
   position: fixed;
-  width: 320px;
+  width: 330px;
   height: 140px;
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
-  padding-left: 50px;
+  padding-left: 60px;
   font-family: 'Futura', sans-serif;
 }
   /* CAYETANO text*/
-  .text-wrapper .big-text {
-    font-size: 70px;
-    color: #529BD4;
-    background-image: linear-gradient(135deg, #529bd4 0%,#529bd4 78%,#ffffff 84%,#ffffff 90%,#529bd4 96%,#529bd4 100%,#7db9e8 100%);
+  .text-wrapper {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
+    .text-wrapper .big-text {
+      font-size: 70px;
+      color: #529BD4;
+      background-image: linear-gradient(135deg, #529bd4 0%,#529bd4 78%,#ffffff 84%,#ffffff 90%,#529bd4 96%,#529bd4 100%,#7db9e8 100%);
+    }
 
-  /* GAMING text */
-  .text-wrapper .small-text {
-    width: 300px;
-    font-size: 19px;
-    color: #F49825;
-    padding-left: 145px;
-    margin-top: -20px;
-    background-image: linear-gradient(135deg, #F49825 0%,#F49825 78%,#ffffff 84%,#ffffff 90%,#F49825 96%,#F49825 100%,#F49825 100%);
-  }
+    /* GAMING text */
+    .text-wrapper .small-text {
+      width: 300px;
+      font-size: 19px;
+      color: #F49825;
+      padding-left: 145px;
+      margin-top: -20px;
+      background-image: linear-gradient(135deg, #F49825 0%,#F49825 78%,#ffffff 84%,#ffffff 90%,#F49825 96%,#F49825 100%,#F49825 100%);
+    }
 
     /* TOP SQUARES */
     .top-squares-wrapper {
       position: relative;
-      top: 33px;
-      left: 158px;
+      top: 35px;
+      left: 153px;
     }
       .top-square {
         position: relative;
@@ -69,7 +73,7 @@ body {
     /* BOTTOM SQUARES */
     .bottom-squares-wrapper {
       margin-left: 105px;
-      margin-top: -21px;
+      margin-top: -20px;
     } 
       .bottom-square {
         position: relative;
@@ -94,7 +98,7 @@ body {
 
 @keyframes blink {
 	60% { background-position: 0; }
-	100% { background-position: 270px; }
+	100% { background-position: 300px; }
 }
 
 @keyframes showSquare {
@@ -103,7 +107,6 @@ body {
 }
 
 .blink-animation {
-  /* Anim propetries */
   background-clip: text;
   -webkit-background-clip: text;
   background-repeat: repeat-x;
@@ -120,28 +123,29 @@ body {
 /* PHONE FIXES */
 @media only screen and (max-device-width: 768px) {
   .top-squares-wrapper {
-    top: 25px;
-  }
-  .big-text {
-    line-height: 85px;
+    top: 35px;
   }
   .small-text {
-    font-weight: normal;
+    margin-top: -19px !important;
+  }
+  .bottom-squares-wrapper {
+    margin-top: -21px !important;
   }
 }
 
+/* IE FIXES */
 @media screen and (min-width:0\0) and (min-resolution: +72dpi) {
   .big-text, .small-text {
     background-image: none !important;
   }
   .small-text {
     font-weight: normal !important;
+    padding-left: 150px !important;
   }
   .text-wrapper .big-text {
-    height: 103px;
+    height: 108px;
   }
-  .top-squares-wrapper {
-    top: 23px;
-    left: 165px;
+  .bottom-squares-wrapper {
+    margin-left: 110px;
   }
 }
