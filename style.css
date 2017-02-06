@@ -125,6 +125,9 @@ body {
   .big-text {
     line-height: 85px;
   }
+  .small-text {
+    font-weight: normal;
+  }
 }
 
 @media screen and (min-width:0\0) and (min-resolution: +72dpi) {
@@ -133,5 +136,12 @@ body {
   }
   .small-text {
     font-weight: normal !important;
+  }
+  .text-wrapper .big-text {
+    height: 103px;
+  }
+  .top-squares-wrapper {
+    top: 23px;
+    left: 165px;
   }
 }
