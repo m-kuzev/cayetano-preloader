@@ -4,7 +4,7 @@ body {
 
 @font-face {
   font-family: 'Futura';
-  src: url('Futura (Light).ttf');
+  src: url('FuturaLight.ttf');
 }
 
 /* PRELOADER CSS */
@@ -19,21 +19,19 @@ body {
   font-family: 'Futura', sans-serif;
 }
   /* CAYETANO text*/
-  .big-text {
+  .text-wrapper .big-text {
     font-size: 70px;
     color: #529BD4;
-    /*font-weight: bolder;*/
     background-image: linear-gradient(135deg, #529bd4 0%,#529bd4 78%,#ffffff 84%,#ffffff 90%,#529bd4 96%,#529bd4 100%,#7db9e8 100%);
   }
 
   /* GAMING text */
-  .small-text {
+  .text-wrapper .small-text {
     width: 300px;
     font-size: 19px;
     color: #F49825;
     padding-left: 145px;
     margin-top: -20px;
-    /*font-weight: bolder;*/
     background-image: linear-gradient(135deg, #F49825 0%,#F49825 78%,#ffffff 84%,#ffffff 90%,#F49825 96%,#F49825 100%,#F49825 100%);
   }
 
