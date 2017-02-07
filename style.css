@@ -2,7 +2,9 @@
   font-family: 'Futura';
   src: url('FuturaMedium.woff');
 }
-
+body {
+  background-color: black;
+}
 /* PRELOADER CSS */
 .preloader-wrapper{
   position: fixed;
@@ -30,7 +32,7 @@
       width: 300px;
       font-size: 19px;
       color: #F49825;
-      padding-left: 145px;
+      padding-left: 139px;
       margin-top: -20px;
       background-image: linear-gradient(135deg, #F49825 0%,#F49825 78%,#ffffff 84%,#ffffff 90%,#F49825 96%,#F49825 100%,#F49825 100%);
     }
@@ -52,23 +54,27 @@
         opacity: 0;
       }
         .top-square.one {
-          animation-delay: 1.65s;
-        }
-        .top-square.two {
+          animation: showSquare 3s forwards infinite;
           animation-delay: 1.7s;
         }
+        .top-square.two {
+          animation: showSquare 3s forwards infinite;
+          animation-delay: 1.8s;
+        }
         .top-square.three {
-          animation-delay: 1.75s;
+          animation: showSquare 3s forwards infinite;
+          animation-delay: 1.9s;
         }
         .top-square.four {
           top: -19px;
           left: -38px;
-          animation-delay: 1.8s;
+          animation: showSquare 3s forwards infinite;
+          animation-delay: 2s;
         }
 
     /* BOTTOM SQUARES */
     .bottom-squares-wrapper {
-      margin-left: 105px;
+      margin-left: 100px;
       margin-top: -20px;
     } 
       .bottom-square {
@@ -81,15 +87,18 @@
       }
         .bottom-square.one {
           top: 2px;
-          animation-delay: 1.5s;
+          animation: showSquare 3s forwards infinite;
+          animation-delay: 1.25s;
         }
         .bottom-square.two {
-          animation-delay: 1.55s;
+          animation: showSquare 3s forwards infinite;
+          animation-delay: 1.35s;
         }
         .bottom-square.three {
           top: -34px;
           left: 19px;
-          animation-delay: 1.6s;
+          animation: showSquare 3s forwards infinite;
+          animation-delay: 1.45s;
         }
 
 @keyframes blink {
@@ -97,10 +106,7 @@
 	100% { background-position: 300px; }
 }
 
-@keyframes showSquare {
-  50% { opacity: 0; }
-	100% { opacity: 1; }
-}
+@keyframes showSquare { 50% { opacity: 0; } 100% { opacity: 1; } }
 
 .blink-animation {
   background-clip: text;
@@ -110,10 +116,6 @@
   animation: blink 3s linear infinite;
   transform: translate3d(0,0,0);
   backface-visibility: hidden;
-}
-
-.show-square-anim {
-  animation: showSquare 3s forwards infinite;
 }
 
 /* PHONE FIXES */
